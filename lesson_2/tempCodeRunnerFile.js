@@ -1,0 +1,1 @@
+longestSentence(longText);
