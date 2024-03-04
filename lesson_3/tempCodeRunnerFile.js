@@ -1,0 +1,1 @@
+console.log(swap("1a2b3c") === "a1b2c3"); // true

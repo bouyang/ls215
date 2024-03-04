@@ -49,6 +49,7 @@ function longestSentence(text) {
 }
 
 function getSentenceLength(sentence) {
+  console.log(sentence.split(/\s+(\b)/));
   return sentence.split(/\S*\s+/).length;
 }
 
@@ -62,34 +63,39 @@ function getSentenceLength(sentence) {
 
 // Assuming the last sentence is removed:
 
-longestSentence(longText);
+// longestSentence(longText);
 
-// console output
-// Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.
+// // console output
+// // Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.
 
-// The longest sentence has 30 words.
+// // The longest sentence has 30 words.
 
-longestSentence("I!");
-longestSentence("Hello there! Why  not? Goodbye.");
-// Hello there! *OR* Why  not?
+// longestSentence("I!");
+// longestSentence("Hello there! Why  not? Goodbye.");
+// // Hello there! *OR* Why  not?
+
+// // The longest sentence has 2 words.
+
+// longestSentence("No punctuation");
+// // 2 words or 0 words depending on rule if there's no punctuation
+
+// longestSentence("Hello! Why? Goodbye.");
+// // should output:
+// // Hello! (or "Why?" or "Goodye.")
+
+// // The longest sentence has 1 word(s).
+
+// longestSentence("     I yam what I yam! Hi there!");
+// // should output:
+// // I yam what I yam!
+
+// // The longest sentence has 5 words.
+// longestSentence('What\'s up, "Doc"? The brown fox is superlative!');
+// // The brown fox is superlative!
+
+// // The longest sentence has 5 words.
+
+longestSentence("Hello   ! Why  not? Goodbye.");
+// Why  not?
 
 // The longest sentence has 2 words.
-
-longestSentence("No punctuation");
-// 2 words or 0 words depending on rule if there's no punctuation
-
-longestSentence("Hello! Why? Goodbye.");
-// should output:
-// Hello! (or "Why?" or "Goodye.")
-
-// The longest sentence has 1 word(s).
-
-longestSentence("     I yam what I yam! Hi there!");
-// should output:
-// I yam what I yam!
-
-// The longest sentence has 5 words.
-longestSentence('What\'s up, "Doc"? The brown fox is superlative!');
-// The brown fox is superlative!
-
-// The longest sentence has 5 words.
